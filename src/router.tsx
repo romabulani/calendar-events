@@ -1,5 +1,3 @@
-// src/router.tsx
-
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import { LoginPage, SignupPage } from "./pages";

@@ -42,7 +42,7 @@ export const SyncGoogleCalendar: React.FC = () => {
           );
           const { events: userEvents } = response.data;
           setEvents(userEvents);
-          window.location.href = "http://localhost:3001/";
+          window.location.href = "https://calendarevents.vercel.app/";
         }
       } catch (err) {
         console.error("Error fetching events:", err);
