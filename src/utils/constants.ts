@@ -1,1 +1,1 @@
-export const API_URL = "https://calendar-events-backend-rb.vercel.app";
+export const API_URL = "https://calendarevents-backend.vercel.app";
