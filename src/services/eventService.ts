@@ -8,7 +8,10 @@ export const getUserEvents = async (authToken: string, email?: string) => {
         Authorization: `Bearer ${authToken}`,
       },
     });
-    return response.data;
+    if(response?.data?.message?.includes("Google Calendar")) {
+      showError(response?.data?.message)
+    }
+    return response.data.events ?? [];
   } catch (error) {
     console.error("Error fetching events:", error);
     return [];
