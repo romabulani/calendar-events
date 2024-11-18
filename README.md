@@ -62,5 +62,8 @@ npm start
 - Advanced Filters: Filter events by tags, date range, or user.
 
 
+### Notes
+Ensure to add users in the Google Cloud Console project for Google Calendar API access. Without this, Google integration will not work.
+
 ### License
 This project is open-source and available under the MIT License.
