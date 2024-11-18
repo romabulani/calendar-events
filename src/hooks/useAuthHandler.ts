@@ -48,7 +48,6 @@ export const useAuthHandler = () => {
         localStorage.setItem("authUser", JSON.stringify(foundUser));
         navigate("/");
       }
-      toast.success(response?.message);
     } catch (e: any) {
       console.error("authHandler: Error in setting user up", e);
     }
