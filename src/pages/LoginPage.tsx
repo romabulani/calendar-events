@@ -52,6 +52,7 @@ export const LoginPage: React.FC = () => {
               required
             />
             <button
+              type="button"
               className="absolute top-3 right-2 text-sm text-gray-600"
               onClick={(e) => {
                 e.preventDefault();
@@ -72,13 +73,12 @@ export const LoginPage: React.FC = () => {
           Login
         </button>
         <button
-          type="submit"
           onClick={(e) =>
             authHandler({
               e,
               setData: setLoginData,
               data: loginData,
-              isGuest: true
+              isGuest: true,
             })
           }
           className="w-full bg-white-500 py-2 px-4 rounded-md hover:bg-blue-600 hover:text-white mt-2 border-gray-200 border"

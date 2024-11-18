@@ -46,6 +46,7 @@ export const SignupPage: React.FC = () => {
               required
             />
             <button
+              type="button"
               className="absolute top-3 right-2 text-sm text-gray-600"
               onClick={(e) => {
                 e.preventDefault();
