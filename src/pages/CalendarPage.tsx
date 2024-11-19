@@ -38,9 +38,9 @@ export const CalendarPage: React.FC<CalendarUIProps> = ({ events }) => {
       <div className="grid grid-cols-8">
         {/* time */}
         <div className="col-span-1  mt-[40px]">
-          {hours.map((hour, index) => (
+          {hours.map((hour) => (
             <div
-              key={index}
+              key={hour}
               className="h-[60px] flex items-center justify-center border-b text-sm text-gray-600"
             >
               {hour}
@@ -54,7 +54,7 @@ export const CalendarPage: React.FC<CalendarUIProps> = ({ events }) => {
 
           return (
             <div
-              key={dayIndex}
+              key={day.toString() + dayIndex}
               className={`col-span-1 border-l relative ${
                 isToday ? "bg-gray-50" : ""
               }`}
@@ -63,8 +63,11 @@ export const CalendarPage: React.FC<CalendarUIProps> = ({ events }) => {
                 {day.toDateString()}
               </h3>
               <div className="relative h-[1440px]">
-                {hours.map((_, hourIndex) => (
-                  <div key={hourIndex} className="h-[60px] border-b relative">
+                {hours.map((hour, hourIndex) => (
+                  <div
+                    key={hour + hourIndex}
+                    className="h-[60px] border-b relative"
+                  >
                     <CalendarEvents day={day} hour={hourIndex} />
                   </div>
                 ))}
